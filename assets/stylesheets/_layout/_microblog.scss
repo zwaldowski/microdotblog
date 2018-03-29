@@ -132,3 +132,19 @@ pre {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+blockquote {
+	padding-left: 20px;
+	margin: 20px;
+	border-left: 1px solid lightgray;
+}
+
+ol {
+	list-style: decimal;
+	padding-left: 20px;
+	padding-bottom: 15px;
+}
+
+sup {
+	vertical-align: super;
+}
