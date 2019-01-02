@@ -2,7 +2,8 @@
 title: About
 permalink: /about/
 layout: page
-order: 0
+order: -1
+navigation: true
 ---
 
 [ABOUT]
