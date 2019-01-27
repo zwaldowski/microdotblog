@@ -44,6 +44,13 @@ a:hover {
   width: 100%;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .header,
 .single .header {
   text-align: left;
@@ -118,12 +125,12 @@ a:hover {
 
 .main__content {
   padding: 0 1rem;
+  flex: 1;
 }
 
 .single .main__content {
   margin: 0;
   width: auto;
-  flex: 1;
 }
 
 .footer {
