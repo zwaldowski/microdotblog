@@ -6,3 +6,30 @@ exclude:
 sass:
   sass_dir: assets/stylesheets
   style: :compressed
+
+
+title: "Zach Waldowski"
+tagline: "I do the best imitation of myself."
+description: "Follow <a href=\"https://micro.blog/zw\">@zw on Micro.blog</a>."
+credits: "Follow <a href=\"https://micro.blog/zw\">@zw on Micro.blog</a>."
+baseurl: ""
+url: "https://waldowski.me"
+markdown: "kramdown"
+username: "zw"
+microblog_user: "zw"
+permalink: "/:year/:month/:day/:title.html"
+relative_permalinks: false
+author: "Zach Waldowski"
+name: "Zach Waldowski"
+gravatar_hash: "76eb9711d45c1c9a71c0f24004072a22"
+avatar: "https://micro.blog/zw/avatar.jpg"
+full_name: "Zach Waldowski"
+bio: ""
+twitter_username: "zwaldowski"
+github_username: "zwaldowski"
+instagram_username: "zwaldowski"
+paginate: 20
+paginate_path: "/page/:num/"
+timezone: "US/Atlanta"
+site_id: "83"
+gems: ["jekyll-paginate"]
