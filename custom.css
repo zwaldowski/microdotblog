@@ -234,7 +234,7 @@ a:hover {
   }
 
   .contact-links {
-    padding: var(--m-regular-padding);
+    padding: 0 var(--m-regular-padding) var(--m-regular-padding) var(--m-regular-padding);
     position: fixed;
     top: unset;
     bottom: 0;
