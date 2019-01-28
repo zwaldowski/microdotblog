@@ -63,7 +63,7 @@ a:hover {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/uploads/2019/8e44c55032.jpg);
+  background-image: url('https://zw.micro.blog/uploads/2019/8e44c55032.jpg');
   padding: var(--m-regular-padding) 1rem;
 }
 
