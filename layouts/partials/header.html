@@ -1,0 +1,15 @@
+<header class="header" role="banner">
+  <figure class="avatar">
+    <a href="/"><img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Author.name }}"></a>
+  </figure>
+  <h1 class="site__name">{{ .Site.Author.name }}</h1>
+
+	{{ range .Site.Menus.main }}
+		{{ if .Page.Params.redirect_url }}
+			<a class="page-link" href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
+		{{ else }}
+			<a class="site__page" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
+		{{ end }}
+	{{ end }}
+
+</header>
