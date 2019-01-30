@@ -83,6 +83,7 @@ a:hover {
 
 .avatar img {
   border-radius: 48px;
+  height: 125px;
 }
 
 .site__name {
