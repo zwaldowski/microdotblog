@@ -6,7 +6,7 @@
 
 	{{ range .Site.Menus.main }}
 		{{ if .Page.Params.redirect_url }}
-			<a class="page-link" href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
+			<a class="site__page" href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
 		{{ else }}
 			<a class="site__page" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
 		{{ end }}
