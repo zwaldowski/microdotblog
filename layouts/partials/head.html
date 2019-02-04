@@ -11,8 +11,8 @@
   <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/stylesheets/global.css" />
-  <link rel="stylesheet" href="/assets/css/custom.css" />
+  <link rel="stylesheet" href="{{ (resources.Get "css/main.css" | minify).RelPermalink }}" />
+  <link rel="stylesheet" href="{{ (resources.Get "css/custom.css" | minify).RelPermalink }}" />
   <link rel="stylesheet" href="/custom.css" />
 
   {{ if .RSSLink -}}
