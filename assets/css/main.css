@@ -116,8 +116,8 @@ a:hover, a:focus {
 
 .avatar img {
   display: block;
-  max-width: 125px;
-  height: 125px;
+  max-width: 80px;
+  height: 80px;
   border-radius: 48px;
 }
 
@@ -636,4 +636,10 @@ Literal.String.Single, Literal.String.Symbol */
     --m-body-left-margin: calc(var(--m-header-regular-width) + var(--m-regular-padding) + var(--m-body-additional-margin));
     --m-body-right-margin: calc(var(--m-regular-padding) + var(--m-body-additional-margin));
   }
+
+  .avatar img {
+    max-width: 125px;
+    height: 125px;
+  }
+
 }
