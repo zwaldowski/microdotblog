@@ -2,10 +2,10 @@
   <figure class="avatar">
     <a href="/"><img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Author.name }}"></a>
   </figure>
-  <h1 class="site__name">{{ .Site.Author.name }}</h1>
+  <h1 class="site-name">{{ .Site.Author.name }}</h1>
 
   {{ range .Site.Menus.main }}
-    <a class="site__page" href="{{ .Page.Params.redirect_url | default (.URL | relLangURL | safeURL) }}">{{ .Name }}</a>
+    <a class="site-page" href="{{ .Page.Params.redirect_url | default (.URL | relLangURL | safeURL) }}">{{ .Name }}</a>
   {{ end }}
 
   {{ partial "contact_links.html" . }}

@@ -1,12 +1,12 @@
 {{ define "main" }}
-<article class="post--single h-entry">
+<article class="post-single h-entry">
   {{ if .Title }}
     <h1 class="p-name">{{ .Title }}</h1>
   {{ end }}
   <div class="e-content">
   {{ .Content }}
   </div>
-  <footer class="post__footer">
+  <footer class="post-meta">
     <small><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Mon, Jan 2, 2006 at 3:04pm" }}</time></small>
   </footer>
 </article>
