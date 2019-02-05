@@ -11,12 +11,25 @@
   --c-content-foreground: var(--c-primary);
   --c-content-foreground-inverted: #fff;
 
-  --p-header: 2rem;
-  --m-regular-padding: 2rem;
-  --m-header-regular-width: 22rem;
+  --m-minimum-layout-margins-top: 2rem;
+  --m-minimum-layout-margins-right: 1rem;
+  --m-minimum-layout-margins-bottom: 2rem;
+  --m-minimum-layout-margins-left: 1rem;
+
+  --m-layout-margins-top: var(--m-minimum-layout-margins-top);
+  --m-layout-margins-right: var(--m-minimum-layout-margins-right);
+  --m-layout-margins-bottom: var(--m-minimum-layout-margins-bottom);
+  --m-layout-margins-left: var(--m-minimum-layout-margins-left);
 
   --c-code-background: #1f1f24;
   --c-code-plain: #fff;
+}
+
+@supports(padding: max(0px)) {
+  :root {
+    --m-layout-margins-right: max(var(--m-minimum-layout-margins-right), env(safe-area-inset-right));
+    --m-layout-margins-left: max(var(--m-minimum-layout-margins-left), env(safe-area-inset-left));
+  }
 }
 
 /* User agent reset */
@@ -73,9 +86,12 @@ body {
 }
 
 p {
-  margin-top: 1.1rem;
   font-size: 1.1rem;
   line-height: 1.3;
+}
+
+p:not(:first-child) {
+  margin-top: 1.1rem;
 }
 
 p:not(:last-child) {
@@ -95,12 +111,18 @@ a:hover, a:focus {
 }
 
 /* Compact width, compact height header (default) */
+.header, .main__content, .footer {
+  padding-top: var(--m-layout-margins-top);
+  padding-right: var(--m-layout-margins-right);
+  padding-bottom: var(--m-layout-margins-bottom);
+  padding-left: var(--m-layout-margins-left);
+}
+
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--m-regular-padding) 1rem;
   text-align: left;
   background: #202020;
   background-image: url(/uploads/2019/8e44c55032.jpg);
@@ -176,7 +198,6 @@ a:hover, a:focus {
 
 .main__content {
   flex: 1;
-  padding: 0 1rem;
 }
 
 .post img, .post--single img {
@@ -297,8 +318,6 @@ sup {
 }
 
 .footer {
-  margin: 1rem 0 0 0;
-  padding: var(--m-regular-padding) 1rem;
   color: var(--c-secondary);
   font-size: 0.8rem;
   text-align: center;
@@ -365,9 +384,6 @@ code {
 }
 
 /* Single Posts */
-.post--single {
-  margin: 3rem auto;
-}
 
 .post--single p {
   font-size: 1.4rem;
@@ -592,10 +608,18 @@ Literal.String.Single, Literal.String.Symbol */
 }
 
 /* Fixed header on left in regular width (tablets) */
-@media (min-width: 48em) {
+@media (min-width: 44em) {
   :root {
-    --m-body-left-margin: calc(var(--m-header-regular-width) + var(--m-regular-padding));
-    --m-body-right-margin: --m-regular-padding;
+    --m-minimum-layout-margins-right: 2rem;
+    --m-minimum-layout-margins-left: 2rem;
+    --m-header-width: 20rem;
+  }
+
+  @supports(padding: max(0px)) {
+    :root {
+      --m-layout-margins-top: max(var(--m-minimum-layout-margins-top), env(safe-area-inset-top));
+      --m-layout-margins-bottom: max(var(--m-minimum-layout-margins-bottom), env(safe-area-inset-bottom));
+    }
   }
 
   .header {
@@ -604,19 +628,22 @@ Literal.String.Single, Literal.String.Symbol */
     left: 0;
     justify-content: flex-end;
     align-items: flex-start;
-    width: var(--m-header-regular-width);
+    width: var(--m-header-width);
     height: 100vh;
-    padding: var(--m-regular-padding);
   }
 
   .site__name {
     text-align: justify;
   }
 
+  .main__content, .footer {
+    margin-left: var(--m-header-width);
+    padding-left: var(--m-minimum-layout-margins-left);
+  }
+
   .main__content {
     max-width: 44rem;
-    margin-right: var(--m-regular-padding);
-    margin-left: var(--m-body-left-margin);
+    padding-bottom: var(--m-minimum-layout-margins-bottom);
   }
 
   .single .main__content {
@@ -624,22 +651,19 @@ Literal.String.Single, Literal.String.Symbol */
   }
 
   .footer {
-    padding-right: var(--m-body-right-margin);
-    padding-left: var(--m-body-left-margin);
+    padding-top: var(--m-minimum-layout-margins-top);
   }
 }
 
 /* Adjusts header sizing on large width (desktop) */
 @media (min-width: 64em) {
-  :root {
-    --m-body-additional-margin: 3rem;
-    --m-body-left-margin: calc(var(--m-header-regular-width) + var(--m-regular-padding) + var(--m-body-additional-margin));
-    --m-body-right-margin: calc(var(--m-regular-padding) + var(--m-body-additional-margin));
-  }
-
   .avatar img {
     max-width: 125px;
     height: 125px;
   }
 
+  .main__content, .footer {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
 }
