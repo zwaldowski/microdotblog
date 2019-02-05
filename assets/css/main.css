@@ -133,8 +133,26 @@ a:hover, a:focus {
   min-height: 100vh;
 }
 
-.avatar img {
+.avatar a {
   display: block;
+  color: #000;
+}
+
+.avatar a:hover, .avatar a:focus {
+  color: var(--tint);
+}
+
+.single .avatar a::before {
+  position: absolute;
+  width: 1.5rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  content: "←";
+}
+
+.avatar img {
   max-width: 5rem;
   height: 5rem;
   border-radius: 3rem;
@@ -184,7 +202,7 @@ a:hover, a:focus {
   background-color: var(--content-foreground-inverted);
 }
 
-.contact-links a:hover {
+.contact-links a:hover, .contact-links a:focus {
   color: var(--tint);
 }
 
