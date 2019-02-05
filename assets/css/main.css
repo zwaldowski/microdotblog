@@ -198,6 +198,7 @@ a:hover, a:focus {
 
 .main__content {
   flex: 1;
+  max-width: 46rem;
 }
 
 .post img, .post--single img {
@@ -642,12 +643,11 @@ Literal.String.Single, Literal.String.Symbol */
   }
 
   .main__content {
-    max-width: 44rem;
     padding-bottom: var(--m-minimum-layout-margins-bottom);
   }
 
   .single .main__content {
-    max-width: 62rem;
+    max-width: 58rem;
   }
 
   .footer {
