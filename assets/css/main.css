@@ -25,7 +25,7 @@
   --c-code-plain: #fff;
 }
 
-@supports(padding: max(0px)) {
+@supports(padding: max(0rem)) {
   :root {
     --m-layout-margins-right: max(var(--m-minimum-layout-margins-right), env(safe-area-inset-right));
     --m-layout-margins-left: max(var(--m-minimum-layout-margins-left), env(safe-area-inset-left));
@@ -138,9 +138,9 @@ a:hover, a:focus {
 
 .avatar img {
   display: block;
-  max-width: 80px;
-  height: 80px;
-  border-radius: 48px;
+  max-width: 5rem;
+  height: 5rem;
+  border-radius: 3rem;
 }
 
 .site__name {
@@ -179,7 +179,7 @@ a:hover, a:focus {
 
 .contact-links a {
   margin: 0 0.125rem;
-  padding: 0 0.1875rem;
+  padding: 0 0.25rem;
   color: #000;
 }
 
@@ -248,68 +248,68 @@ strong {
 }
 
 h1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-weight: bold;
   font-size: 1.4rem;
 }
 
 h2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 h3 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-weight: bold;
 }
 
 h4 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-weight: bold;
 }
 
 ul {
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 15px;
-  padding-left: 5px;
+  padding-top: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 1rem;
+  padding-left: 0.25rem;
   list-style: disc inside;
 }
 
 li {
-  margin-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-left: 0.2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 pre {
   display: block;
-  margin: 0 0 10px;
-  padding: 9.5px;
+  margin: 0 0 0.75rem;
+  padding: 0.5rem;
   color: #333;
-  font-size: 13px;
-  line-height: 1.42857143;
+  font-size: 0.8rem;
+  line-height: 1.4;
   word-wrap: break-word;
   word-break: break-all;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 blockquote {
-  margin: 20px;
-  padding-left: 20px;
+  margin: 1.25rem;
+  padding-left: 1.25rem;
   border-left: 1px solid lightgray;
 }
 
 ol {
-  padding-bottom: 15px;
-  padding-left: 20px;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
   list-style: decimal;
 }
 
@@ -329,11 +329,11 @@ sup {
 }
 
 #post-nav {
-  padding-top: 25px;
+  padding-top: 1.5rem;
 }
 
 #post-nav .prev {
-  padding-right: 10px;
+  padding-right: 0.75rem;
 }
 
 /* Tables */
@@ -391,7 +391,7 @@ code {
 
 .post--single img {
   width: 100%;
-  max-width: 450px;
+  max-width: 28rem;
   margin: 0 auto 1rem auto;
 }
 
@@ -615,7 +615,7 @@ Literal.String.Single, Literal.String.Symbol */
     --m-header-width: 20rem;
   }
 
-  @supports(padding: max(0px)) {
+  @supports(padding: max(0rem)) {
     :root {
       --m-layout-margins-top: max(var(--m-minimum-layout-margins-top), env(safe-area-inset-top));
       --m-layout-margins-bottom: max(var(--m-minimum-layout-margins-bottom), env(safe-area-inset-bottom));
@@ -658,8 +658,8 @@ Literal.String.Single, Literal.String.Symbol */
 /* Adjusts header sizing on large width (desktop) */
 @media (min-width: 64em) {
   .avatar img {
-    max-width: 125px;
-    height: 125px;
+    max-width: 8rem;
+    height: 8rem;
   }
 
   .main__content, .footer {
