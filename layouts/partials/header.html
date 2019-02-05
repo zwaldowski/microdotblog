@@ -4,12 +4,10 @@
   </figure>
   <h1 class="site__name">{{ .Site.Author.name }}</h1>
 
-	{{ range .Site.Menus.main }}
-		{{ if .Page.Params.redirect_url }}
-			<a class="site__page" href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
-		{{ else }}
-			<a class="site__page" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
-		{{ end }}
-	{{ end }}
+  {{ range .Site.Menus.main }}
+    <a class="site__page" href="{{ .Page.Params.redirect_url | default (.URL | relLangURL | safeURL) }}">{{ .Name }}</a>
+  {{ end }}
+
+  {{ partial "contact_links.html" . }}
 
 </header>

@@ -98,7 +98,7 @@ a:hover, a:focus {
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: var(--m-regular-padding) 1rem;
   text-align: left;
@@ -122,13 +122,12 @@ a:hover, a:focus {
 }
 
 .site__name {
-  flex: 1;
-  padding: 1.75rem 0;
+  padding: 1rem 0;
   color: var(--c-content-foreground-inverted);
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.25em;
-  text-align: justify;
+  text-align: center;
 }
 
 .site__page {
@@ -141,25 +140,7 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-.site__page:first-of-type {
-  margin-top: 3.25rem;
-}
-
-.site__page:last-of-type {
-  margin-bottom: 0;
-}
-
-/* Contact links in footer, but injected into header */
 .contact-links {
-  position: absolute;
-  top: 15rem;
-  right: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.contact-links #wrapper {
   padding: 0.625rem;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
@@ -167,7 +148,7 @@ a:hover, a:focus {
 }
 
 @supports (backdrop-filter: none) or (-webkit-backdrop-filter: none) {
-  .contact-links #wrapper {
+  .contact-links {
     background-color: clear;
     -webkit-backdrop-filter: blur(5px) grayscale(20%) brightness(100%);
     backdrop-filter: blur(5px) grayscale(20%) brightness(100%);
@@ -180,7 +161,7 @@ a:hover, a:focus {
   color: #000;
 }
 
-.contact-links #wrapper:hover {
+.contact-links:hover {
   background-color: var(--c-content-foreground-inverted);
 }
 
@@ -597,7 +578,7 @@ Literal.String.Single, Literal.String.Symbol */
 }
 
 /* No full-height hero on home (tablets) */
-@media (min-height: 30em) {
+@media (min-height: 45em) {
   .home .header {
     min-height: unset;
   }
@@ -606,7 +587,6 @@ Literal.String.Single, Literal.String.Symbol */
 /* Adjust site title (tablets) */
 @media (min-width: 24em) {
   .site__name {
-    padding: 1rem 0 1.625rem 0;
     font-size: 2.8rem;
   }
 }
@@ -630,16 +610,7 @@ Literal.String.Single, Literal.String.Symbol */
   }
 
   .site__name {
-    flex: 0;
-    padding: 1rem 0;
-  }
-
-  .site__page:first-of-type {
-    margin-top: 0;
-  }
-
-  .site__page:last-of-type {
-    margin-bottom: 3.75rem;
+    text-align: justify;
   }
 
   .main__content {
@@ -655,15 +626,6 @@ Literal.String.Single, Literal.String.Symbol */
   .footer {
     padding-right: var(--m-body-right-margin);
     padding-left: var(--m-body-left-margin);
-  }
-
-  .contact-links {
-    position: fixed;
-    top: unset;
-    bottom: 0;
-    justify-content: flex-start;
-    width: var(--m-header-regular-width);
-    padding: 0 var(--m-regular-padding) var(--m-regular-padding) var(--m-regular-padding);
   }
 }
 
