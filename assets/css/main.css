@@ -189,8 +189,6 @@ a:hover, a:focus {
 }
 
 .contact-links a.icon svg {
-  width: 1.25rem;
-  height: auto;
   vertical-align: middle;
   fill: currentColor;
 }
