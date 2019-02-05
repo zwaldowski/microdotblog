@@ -1,0 +1,29 @@
+<nav class="contact-links">
+  <section id="wrapper">
+    {{ $width := 20 }}
+    {{ with .Site.Params.itunes_email | default .Site.Params.author.email }}
+      {{ partial "icon_link" (dict "title" "Email" "href" (printf "mailto:%s" (. | urlize)) "icon" "mail" "width" $width) }}
+    {{ end }}
+    {{ with .Site.Params.github_username }}
+      {{ partial "icon_link" (dict "title" "GitHub" "href" (printf "https://github.com/%s" .) "icon" "github" "width" $width) }}
+    {{ end }}
+    {{ partial "icon_link" (dict "title" "Micro.blog" "href" (printf "https://micro.blog/%s" .Site.Author.username) "icon" "microdotblog" "width" $width) }}
+    {{ with .Site.Params.mastodon_username }}
+      {{ $parts := split . "@" }}
+      {{ partial "icon_link" (dict "title" "Mastodon" "href" (printf "https://%s/%s" (index $parts 1) (index $parts 0)) "icon" "mastodon" "width" $width) }}
+    {{ end }}
+    {{ with .Site.Params.twitter_username }}
+      {{ partial "icon_link" (dict "title" "Twitter" "href" (printf "https://twitter.com/%s" .) "icon" "twitter" "width" $width) }}
+    {{ end }}
+    {{ with .Site.Params.facebook_username }}
+      {{ partial "icon_link" (dict "title" "Facebook" "href" (printf "https://www.facebook.com/%s" .) "icon" "facebook" "width" $width) }}
+    {{ end }}
+    {{ with .Site.Params.instagram_username }}
+      {{ partial "icon_link" (dict "title" "Instagram" "href" (printf "https://instagram.com/%s" .) "icon" "instagram" "width" $width) }}
+    {{ end }}
+    {{ with .Site.Params.linkedin_username }}
+      {{ partial "icon_link" (dict "title" "LinkedIn" "href" (printf "https://www.linkedin.com/in/%s" .) "icon" "linkedin" "width" $width) }}
+    {{ end }}
+    {{ partial "icon_link" (dict "title" "RSS" "href" "/feed.xml" "icon" "rss" "width" $width) }}
+    </section>
+</nav>

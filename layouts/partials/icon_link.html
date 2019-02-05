@@ -1,0 +1,1 @@
+<a href="{{ .href }}" class="icon"{{ with .rel }} rel="{{ . }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }}>{{ partial "icon.svg" (dict "name" .icon "width" .width) }}</a>
