@@ -5,8 +5,12 @@
 
   --content-background: #fff;
   --content-background-inverted: #a09da6;
+  --content-background-alternate: #f9f9f9;
   --content-foreground: #55595c;
   --content-foreground-inverted: #fff;
+  --content-foreground-alternate: #888;
+
+  --link-alternate: #bbb;
 
   --code-background: #1f1f24;
   --code-foreground: #fff;
@@ -232,17 +236,17 @@ a:hover, a:focus {
 .post:not(:last-of-type) {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--accent);
 }
 
 .post-meta {
   padding-top: 1.5rem;
-  color: #888;
+  color: var(--content-foreground-alternate);
   font-size: 0.85rem;
 }
 
 .post-meta a {
-  color: #bbb;
+  color: var(--link-alternate);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -363,14 +367,14 @@ sup {
 .post tbody tr:nth-child(odd) th,
 .post-single tbody tr:nth-child(odd) td,
 .post-single tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
+  background-color: var(--content-background-alternate);
 }
 
 .post .message,
 .post-single .message {
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #f9f9f9;
+  background-color: var(--content-background-alternate);
 }
 
 /* Code */
