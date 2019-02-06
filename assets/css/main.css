@@ -303,20 +303,6 @@ li {
   padding-bottom: 0.25rem;
 }
 
-pre {
-  display: block;
-  margin: 0 0 0.75rem;
-  padding: 0.5rem;
-  color: #333;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  word-wrap: break-word;
-  word-break: break-all;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-}
-
 blockquote {
   margin: 1.25rem;
   padding-left: 1.25rem;
@@ -387,16 +373,32 @@ sup {
   background-color: #f9f9f9;
 }
 
-/* Inline code */
-code {
-  display: inline-block;
-  padding: 0.15em 0.35em;
+/* Code */
+pre, code {
   color: var(--code-foreground);
   font-weight: 500;
+  font-size: 0.8rem;
   font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
-  line-height: 1.35;
+  line-height: 1.4;
   background-color: var(--code-background);
+  border: 1px solid var(--accent);
   border-radius: 0.4em;
+}
+
+code {
+  padding: 0.15em 0.35em;
+}
+
+pre {
+  padding: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+pre > code {
+  padding-right: 0;
+  padding-left: 0;
+  border: 0;
 }
 
 /* Single Posts */
@@ -448,13 +450,6 @@ code {
   --selection: #515b70;
   --invisible: #424d5b;
   --plain-inverted: #000;
-}
-
-.highlight pre {
-  overflow: hidden;
-  color: var(--plain);
-  font-weight: 500;
-  background-color: var(--background);
 }
 
 /* Error */
