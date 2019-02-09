@@ -10,4 +10,9 @@
 
   {{ partial "contact_links.html" . }}
 
+  {{ if .IsHome }}
+  <figure class="jump-down">
+    {{ partial "icon.svg" (dict "name" "chevron-down" "width" 38) }}
+  </figure>
+  {{ end }}
 </header>

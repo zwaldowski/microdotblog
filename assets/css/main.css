@@ -215,9 +215,53 @@ a:hover, a:focus {
   color: var(--tint);
 }
 
-.contact-links a.icon svg {
+.contact-links a.icon svg, .jump-down svg {
   vertical-align: middle;
   fill: currentColor;
+}
+
+@keyframes jumpDownPrompt {
+  from {
+    opacity: 0;
+  }
+
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50%, to {
+    opacity: 1;
+  }
+
+  58% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  66% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  74% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  82% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  90% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+}
+
+.jump-down {
+  position: absolute;
+  bottom: 0.8rem;
+  transform-origin: bottom center;
+  animation-duration: 2s;
+  animation-name: jumpDownPrompt;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
 }
 
 .page-content {
@@ -654,6 +698,10 @@ Literal.String.Single, Literal.String.Symbol */
 
   .site-name {
     text-align: justify;
+  }
+
+  .jump-down {
+    display: none;
   }
 
   .page-content, .site-footer {
