@@ -134,7 +134,7 @@ a:hover, a:focus {
 
 /* Homepage header takes up first viewport on mobile */
 .home .header {
-  min-height: 100vh;
+  min-height: 88vh;
 }
 
 .avatar a {
@@ -154,6 +154,7 @@ a:hover, a:focus {
   border-radius: 0.75rem;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
   content: "←";
+  line-height: 1.5;
 }
 
 .avatar img {
