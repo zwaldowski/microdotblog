@@ -1,6 +1,6 @@
 <header class="header" role="banner">
   <figure class="avatar">
-    <a href="/"><img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Author.name }}"></a>
+    {{ if not .IsHome }}<a href="/">{{ end }}<img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Author.name }}">{{ if not .IsHome }}</a>{{ end }}
   </figure>
   <h1 class="site-name">{{ .Site.Author.name }}</h1>
 
