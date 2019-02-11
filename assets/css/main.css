@@ -101,11 +101,7 @@ a:hover, a:focus {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  background: var(--header-background);
-  background-image: url(/uploads/2019/8e44c55032.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  background: url(/uploads/2019/8e44c55032.jpg) center center/cover no-repeat var(--header-background);
   color: var(--header-foreground);
 }
 
@@ -238,10 +234,7 @@ a:hover, a:focus {
 
 .jump-down {
   transform-origin: bottom center;
-  animation-duration: 2s;
-  animation-name: jumpDownPrompt;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
+  animation: jumpDownPrompt 2s 1s backwards;
   margin: 0;
 }
 
@@ -306,17 +299,13 @@ h4 {
 }
 
 ul {
-  padding-top: 0.25rem;
-  padding-right: 0.25rem;
-  padding-bottom: 1rem;
-  padding-left: 0.25rem;
+  padding: 0.25rem 0.25rem 1rem 0.25rem;
   list-style: disc inside;
 }
 
 li {
   margin-left: 0.2rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding: 0.25rem 0;
 }
 
 blockquote {
