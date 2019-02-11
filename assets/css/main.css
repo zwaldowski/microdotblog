@@ -3,12 +3,19 @@
   --tint: #607890;
   --accent: #ddd;
 
+  --header-background: #202020;
+  --header-background-alternate: #fff;
+  --header-foreground: #fff;
+  --header-foreground-alternate: #000;
+
   --content-background: #fff;
-  --content-background-inverted: #a09da6;
   --content-background-alternate: #f9f9f9;
   --content-foreground: #55595c;
-  --content-foreground-inverted: #fff;
   --content-foreground-alternate: #888;
+
+  --footer-background: #a09da6;
+  --footer-foreground: var(--accent);
+  --footer-foreground-alternate: #fff;
 
   --link-alternate: #bbb;
 
@@ -125,12 +132,12 @@ a:hover, a:focus {
   justify-content: center;
   align-items: center;
   text-align: left;
-  background: #202020;
+  background: var(--header-background);
   background-image: url(/uploads/2019/8e44c55032.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  color: var(--content-foreground-inverted);
+  color: var(--header-foreground);
 }
 
 .header > *:not(:first-child) {
@@ -144,7 +151,7 @@ a:hover, a:focus {
 
 .avatar a {
   display: block;
-  color: var(--content-foreground);
+  color: var(--header-foreground-alternate);
   line-height: 0
 }
 
@@ -156,7 +163,7 @@ a:hover, a:focus {
   position: absolute;
   width: 1.5rem;
   text-align: center;
-  background: var(--content-background);
+  background: var(--header-background-alternate);
   border-radius: 0.75rem;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
   content: "←";
@@ -203,7 +210,7 @@ a:hover, a:focus {
 
 .contact-links a {
   padding: 0 0.4rem;
-  color: #000;
+  color: var(--header-foreground-alternate);
   font-size: 1rem;
 }
 
@@ -373,14 +380,14 @@ sup {
 }
 
 .site-footer {
-  color: var(--accent);
+  color: var(--footer-foreground);
   font-size: 0.8rem;
   text-align: center;
-  background-color: var(--content-background-inverted);
+  background-color: var(--footer-background);
 }
 
 .site-footer a {
-  color: var(--content-foreground-inverted);
+  color: var(--footer-foreground-alternate);
 }
 
 #post-nav {
