@@ -1,5 +1,6 @@
 <header class="header" role="banner">
-  {{ if not .IsHome }}<a href="/" class="site-back">{{ end }}<img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Author.name }}" class="site-avatar">{{ if not .IsHome }}</a>{{ end }}
+  {{ $isMicroDotBlogHome := (and .IsHome (not (.AlternativeOutputFormats.Get "HTML"))) }}
+  {{ if not $isMicroDotBlogHome }}<a href="/" class="site-back">{{ end }}<img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Author.name }}" class="site-avatar">{{ if not $isMicroDotBlogHome }}</a>{{ end }}
 
   <h1 class="site-name">{{ .Site.Author.name }}</h1>
 
@@ -10,7 +11,7 @@
 
   {{ partial "contact_links.html" . }}
 
-  {{ if .IsHome }}
+  {{ if $isMicroDotBlogHome }}
   <figure class="jump-down">
     {{ partial "icon.svg" (dict "name" "chevron-down" "width" 38) }}
   </figure>

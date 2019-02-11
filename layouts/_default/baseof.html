@@ -2,7 +2,8 @@
 <html>
   {{ partial "head.html" . }}
 
-  <body class="{{ if .IsHome }}home{{ else }}single{{ end }}">
+  {{ $isMicroDotBlogHome := (and .IsHome (not (.AlternativeOutputFormats.Get "HTML"))) }}
+  <body class="{{ if $isMicroDotBlogHome }}home{{ else }}single{{ end }}">
 
     {{ partial "header.html" . }}
 
