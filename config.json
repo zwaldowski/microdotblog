@@ -1,2 +1,4 @@
 {
+    "pygmentsCodeFences": true,
+    "pygmentsStyle": "solarized-dark"
 }

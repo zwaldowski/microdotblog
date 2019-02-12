@@ -19,9 +19,6 @@
 
   --link-alternate: #bbb;
 
-  --code-background: #1f1f24;
-  --code-foreground: #fff;
-
   --minimum-layout-margins-top: 2rem;
   --minimum-layout-margins-right: 1rem;
   --minimum-layout-margins-bottom: 2rem;
@@ -375,12 +372,10 @@ ol {
 
 /* Code */
 pre, code {
-  color: var(--code-foreground);
   font-weight: 500;
   font-size: 0.8rem;
   font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
   line-height: 1.4;
-  background-color: var(--code-background);
   border: 1px solid var(--accent);
   border-radius: 0.4em;
 }
@@ -428,181 +423,6 @@ pre > code {
 
 .post-single h4 {
   font-size: 1.45rem;
-}
-
-/* Syntax highlighting based on Xcode "Default (Dark)"" theme, circa Jan 2019 */
-.highlight {
-  --plain: var(--code-foreground);
-  --comment: #6c7986;
-  --comment-keyword: #92a1b1;
-  --string: #fc6a5d;
-  --character: #9686f5;
-  --number: #9686f5;
-  --keyword: #fc5fa3;
-  --preprocessor: #fd8f3f;
-  --url: #53a5fb;
-  --attribute: #75b492;
-  --internal-variable: #91d462;
-  --internal-function: #aef37d;
-  --external-variable: #7ac8b6;
-  --external-function: #99e8d5;
-  --background: var(--code-background);
-  --line: #23252b;
-  --selection: #515b70;
-  --invisible: #424d5b;
-  --plain-inverted: #000;
-}
-
-/* Error */
-.highlight .err {
-  color: var(--plain-inverted);
-  background-color: var(--string);
-}
-
-/* Keyword, Keyword.Declaration, Keyword.Namespace, Keyword.Pseudo, Keyword.Reserved, Name.Builtin */
-.highlight .k,
-.highlight .kd,
-.highlight .kn,
-.highlight .kp,
-.highlight .kr,
-.highlight .nb {
-  color: var(--keyword);
-  font-weight: bold;
-}
-
-/* Keyword.Constant, Keyword.Type */
-.highlight .kc,
-.highlight .kt {
-  color: var(--internal-variable);
-}
-
-/* Name, Name.Namesapce */
-.highlight .n,
-.highlight .nn {
-  color: var(--internal-variable);
-}
-
-/* Name.Attribute, Name.Decorator */
-.highlight .na,
-.highlight .nd {
-  color: var(--attribute);
-}
-
-/* Name.Class, Name.Constant */
-.highlight .nc,
-.highlight .no {
-  color: var(--external-variable);
-}
-
-/* Name.Function */
-.highlight .nf {
-  color: var(--external-function);
-}
-
-/* Name.Tag */
-.highlight .nt {
-  color: var(--preprocessor);
-}
-
-/* Literal, Literal.Number, Literal.Number.Float, Literal.Number.Hex, Literal.Number.Integer, Literal.Number.Oct */
-.highlight .l,
-.highlight .m,
-.highlight .mf,
-.highlight .mh,
-.highlight .mi,
-.highlight .mo {
-  color: var(--number);
-}
-
-/* Literal.Date, Literal.String, Literal.String.Backtick, Literal.String.Double, Literal.String.Escape,
-Literal.String.Heredoc, Literal.String.Interpol, Literal.String.Other, Literal.String.Regex,
-Literal.String.Single, Literal.String.Symbol */
-.highlight .ld,
-.highlight .s,
-.highlight .sb,
-.highlight .s2,
-.highlight .se,
-.highlight .sh,
-.highlight .si,
-.highlight .sx,
-.highlight .sr,
-.highlight .s1,
-.highlight .ss {
-  color: var(--string);
-}
-
-/* Literal.String.Char */
-.highlight .sc {
-  color: var(--character);
-}
-
-/* Literal.String.Doc */
-.highlight .sd {
-  color: var(--comment);
-}
-
-/* Operator, Operator.Word, Punctuation, Punctuation.Indicator */
-.highlight .o,
-.highlight .ow,
-.highlight .p,
-.highlight .pi {
-  color: var(--plain);
-}
-
-/* Comment, Comment.Single */
-.highlight .c,
-.highlight .c1 {
-  color: var(--comment);
-}
-
-/* Comment.Doc, Comment.Multiline */
-.highlight .cd,
-.highlight .cm {
-  color: var(--comment);
-  font-style: var(--s-comment);
-}
-
-/* Comment.Preproc, Comment.Special */
-.highlight .cp,
-.highlight .cs {
-  color: var(--comment-keyword);
-  font-weight: bold;
-  font-style: italic;
-}
-
-/* Generic.Deleted */
-.highlight .gd {
-  color: var(--plain);
-  text-decoration: line-through;
-}
-
-/* Generic.Emph */
-.highlight .ge {
-  font-style: italic;
-}
-
-/* Generic.Heading, Generic.Prompt */
-.highlight .gh,
-.highlight .gp {
-  color: var(--comment);
-  font-weight: bold;
-}
-
-/* Generic.Inserted */
-.highlight .gi {
-  color: var(--plain);
-  font-weight: bold;
-}
-
-/* Generic.Strong */
-.highlight .gs {
-  font-weight: bold;
-}
-
-/* Generic.Subheading */
-.highlight .gu {
-  color: var(--comment);
-  font-style: italic;
 }
 
 /* No full-height hero on home (tablets) */
