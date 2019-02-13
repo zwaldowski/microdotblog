@@ -387,6 +387,7 @@ code {
 pre {
   padding: 0.5rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 1rem 0;
 }
 
