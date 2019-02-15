@@ -32,7 +32,9 @@
 
 @supports(padding: max(0rem)) {
   :root {
+    --layout-margins-top: max(var(--minimum-layout-margins-top), env(safe-area-inset-top));
     --layout-margins-right: max(var(--minimum-layout-margins-right), env(safe-area-inset-right));
+    --layout-margins-bottom: max(var(--minimum-layout-margins-bottom), env(safe-area-inset-bottom));
     --layout-margins-left: max(var(--minimum-layout-margins-left), env(safe-area-inset-left));
   }
 }
@@ -86,14 +88,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-/* Compact width, compact height header (default) */
-.header, .page-content, .site-footer {
-  padding-top: var(--layout-margins-top);
-  padding-right: var(--layout-margins-right);
-  padding-bottom: var(--layout-margins-bottom);
-  padding-left: var(--layout-margins-left);
-}
-
+/* Inline header on mobile (default) */
 .header {
   display: flex;
   flex-direction: column;
@@ -101,6 +96,7 @@ a:hover, a:focus {
   text-align: left;
   background: url(/uploads/2019/8e44c55032.jpg) center center/cover no-repeat var(--header-background);
   color: var(--header-foreground);
+  padding: var(--layout-margins-top) var(--layout-margins-right) var(--minimum-layout-margins-bottom) var(--layout-margins-left);
 }
 
 .header > *:not(:first-child) {
@@ -119,7 +115,7 @@ a:hover, a:focus {
   margin: 0.8rem 0 0 0;
 }
 
-/* Homepage header takes up first viewport on mobile */
+/* Header of homepage approximates first viewport */
 .home .header {
   min-height: 88vh;
 }
@@ -240,6 +236,7 @@ a:hover, a:focus {
   flex: 1;
   max-width: 46rem;
   margin: 0;
+  padding: var(--minimum-layout-margins-top) var(--layout-margins-right) var(--minimum-layout-margins-bottom) var(--layout-margins-left);
 }
 
 .post img, .post-single img {
@@ -322,6 +319,7 @@ ol {
   color: var(--footer-foreground);
   text-align: center;
   background-color: var(--footer-background);
+  padding: var(--minimum-layout-margins-top) var(--layout-margins-right) var(--layout-margins-bottom) var(--layout-margins-left);
 }
 
 .site-footer a {
@@ -453,13 +451,6 @@ pre > code {
     --header-width: 20rem;
   }
 
-  @supports(padding: max(0rem)) {
-    :root {
-      --layout-margins-top: max(var(--minimum-layout-margins-top), env(safe-area-inset-top));
-      --layout-margins-bottom: max(var(--minimum-layout-margins-bottom), env(safe-area-inset-bottom));
-    }
-  }
-
   .header {
     position: fixed;
     bottom: 0;
@@ -468,6 +459,7 @@ pre > code {
     align-items: flex-start;
     width: var(--header-width);
     height: 100vh;
+    padding-bottom: var(--layout-margins-bottom);
   }
 
   .header .profile {
@@ -488,16 +480,8 @@ pre > code {
     padding-left: var(--minimum-layout-margins-left);
   }
 
-  .page-content {
-    padding-bottom: var(--minimum-layout-margins-bottom);
-  }
-
   .single .page-content {
     max-width: 58rem;
-  }
-
-  .site-footer {
-    padding-top: var(--minimum-layout-margins-top);
   }
 }
 
