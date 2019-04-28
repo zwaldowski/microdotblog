@@ -1,7 +1,7 @@
 <nav class="contact-links">
   {{ $width := 20 }}
   {{ with .Site.Params.itunes_email | default .Site.Params.author.email }}
-    {{ partial "icon_link" (dict "title" "Email" "href" (printf "mailto:%s" (. | urlize)) "icon" "mail" "width" $width) }}
+    {{ partial "icon_link" (dict "title" "Email" "href" (printf "mailto:%s" .) "icon" "mail" "width" $width) }}
   {{ end }}
   {{ with .Site.Params.github_username }}
     {{ partial "icon_link" (dict "title" "GitHub" "href" (printf "https://github.com/%s" .) "icon" "github" "width" $width) }}
