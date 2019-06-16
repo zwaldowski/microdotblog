@@ -239,6 +239,10 @@ a:hover, a:focus {
   padding: var(--minimum-layout-margins-top) var(--layout-margins-right) var(--minimum-layout-margins-bottom) var(--layout-margins-left);
 }
 
+.post {
+  overflow-x: scroll;
+}
+
 .post img, .post-single img {
   display: block;
   width: auto;
