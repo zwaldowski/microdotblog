@@ -237,6 +237,10 @@ a:hover, a:focus {
   max-width: 46rem;
   margin: 0;
   padding: var(--minimum-layout-margins-top) var(--layout-margins-right) var(--minimum-layout-margins-bottom) var(--layout-margins-left);
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .post {
