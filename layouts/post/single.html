@@ -10,4 +10,9 @@
     <small><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Mon, Jan 2, 2006 at 3:04pm" }}</time></small>
   </footer>
 </article>
+
+{{ if .Site.Params.include_conversation }}
+<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+{{ end }}
+
 {{ end }}
