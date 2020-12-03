@@ -381,8 +381,8 @@ ol {
 /* Code */
 pre, code {
   font-weight: 500;
-  font-size: 0.8rem;
-  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
   line-height: 1.4;
   border: 1px solid var(--accent);
   border-radius: 0.4em;
@@ -405,6 +405,10 @@ pre:first-child {
 
 pre:last-child {
   margin-bottom: 0;
+}
+
+p > code {
+  font-size: 0.8em;
 }
 
 pre > code {
@@ -432,6 +436,10 @@ pre > code {
 
 .post-single h4 {
   font-size: 1.45rem;
+}
+
+.post-single footer {
+  font-size: 1.25rem;
 }
 
 /* No full-height hero on home (tablets) */
